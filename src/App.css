@@ -6,3 +6,16 @@
 {
     font-weight: bold;
 }
+.add{
+    border:none;
+}
+.delete{
+    border:none;
+    background-color: transparent;
+}
+.Listform{
+    text-align: center;
+}
+.mylist{
+    margin-top: 30px;
+}
