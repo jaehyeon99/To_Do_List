@@ -40,7 +40,7 @@ function App() {
           }
         </Form>
       </Navbar>
-      <Jumbotron fluid>
+      <Jumbotron className="door" fluid>
         <Container>
           <h3>👋{name}님 환영합니다.👋</h3>
           <p><Clock /></p>

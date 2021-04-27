@@ -6,8 +6,16 @@
 {
     font-weight: bold;
 }
+.write{
+    width: 300px;
+    text-align: center;
+    border-radius: 3%;
+    outline: none;
+}
 .add{
-    border:none;
+    margin-left: 5px;
+    border-radius: 10%;
+    background-color: transparent;
 }
 .delete{
     border:none;
@@ -18,4 +26,24 @@
 }
 .mylist{
     margin-top: 30px;
+}
+.line{
+    width: 900px;
+    border: 1px solid gray;
+}
+.door{
+    text-align: center;
+}
+.mylist{
+    margin-right: 50px;
+    line-height: 200%;
+}
+.clear{
+    margin-top: 15px;
+    margin-right: 50px;
+    border-radius: 10%;
+    background-color: transparent;
+}
+.checked{
+    text-decoration: line-through;
 }
