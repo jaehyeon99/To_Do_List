@@ -11,6 +11,7 @@ function App() {
   let [name, addname] = useState('Guest');
   let [name2, addname2] = useState('');
   let [login, logout] = useState(true);
+
   return (
     <div className="App">
       <Navbar bg="dark" variant="dark">
@@ -33,6 +34,7 @@ function App() {
             login === true ?
               <Button onClick={() => {
                 addname(name2);
+
                 logout(false);
               }} variant="outline-info">확인</Button>
               :
@@ -43,7 +45,7 @@ function App() {
       <Jumbotron className="door" fluid>
         <Container>
           <h3>👋{name}님 환영합니다.👋</h3>
-          <p><Clock /></p>
+          <p> <Clock /></p>
         </Container>
       </Jumbotron>
       <Todo className="todolist" />

@@ -3,17 +3,16 @@ import React, { useState, useEffect } from 'react';
 
 function Todo() {
 
-    // let LocalStorageComponent = () => {
     let [todo, addtodo] = useState([]);
     let [something, newthing] = useState('');
 
 
 
-    // }
+
 
     return (
         <div className="Listform">
-            <h2>🖊️ Today's To Do List 🖊️</h2>
+            <h2>🖊️ Today's To Do  🖊️</h2>
             <br />
             <hr className="line" />
 
@@ -23,13 +22,13 @@ function Todo() {
 
             <button value={something} className="add" onClick={() => {
                 var copy = [...todo];
-
                 something === '' ?
 
                     alert("할 일을 입력해주세요")
                     :
                     copy.push(something);
                 addtodo(copy);
+
                 newthing('');
 
 
@@ -37,14 +36,17 @@ function Todo() {
             }}
             >추가하기</button>
             <div className="mylist">
+
                 {
                     todo.map((list, index) => {
-                        return <li key={index} >{list} <button onClick={() => {
-                            todo.splice(index, 1);
-                            newthing(" ");
-                            alert("할 일을 해결하였습니다.")
+                        return <li key={index} >{list}
 
-                        }} className="delete">🗑️</button>
+                            <button onClick={() => {
+                                todo.splice(index, 1);
+                                newthing(" ");
+                                alert("할 일을 해결하였습니다.")
+
+                            }} className="delete">🗑️</button>
                         </li>
 
                     })
