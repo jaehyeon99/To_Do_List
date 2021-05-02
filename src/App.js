@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Jumbotron, Container, Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import Clock from './Components/Clock';
 import Todo from './Components/Todo';
+import Calender from './Components/Calender'
 
 
 
@@ -15,10 +16,10 @@ function App() {
   return (
     <div className="App">
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">To Do</Navbar.Brand>
+        <Navbar.Brand href="#home">To Do List</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Features</Nav.Link>
+          {/* <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="#features">Features</Nav.Link> */}
         </Nav>
         <Form inline>
           {
@@ -44,11 +45,12 @@ function App() {
       </Navbar>
       <Jumbotron className="door" fluid>
         <Container>
-          <h3>👋{name}님 환영합니다.👋</h3>
+          <h3>👋 {name}님 환영합니다. 👋</h3>
           <p> <Clock /></p>
         </Container>
       </Jumbotron>
       <Todo className="todolist" />
+
     </div>
   );
 }

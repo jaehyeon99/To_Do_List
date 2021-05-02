@@ -1,3 +1,6 @@
+/* .App{
+    background-image: url("../src/background.jpg");
+} */
 .loginname{
     color: white;
     font-weight: bolder;
@@ -46,4 +49,12 @@
 }
 .checked{
     text-decoration: line-through;
+}
+.calender{
+    width: 500px;
+    text-align: center;
+    margin-left:550px;
+}
+.todolist{
+    background-image: url("../src/background.jpg");
 }
