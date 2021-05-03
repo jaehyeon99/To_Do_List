@@ -3,10 +3,15 @@ import React, { useState, useEffect } from 'react';
 
 function Todo() {
 
-    let [todo, addtodo] = useState([]);
+    // let [todo, addtodo] = useState([]);
+    let [todo, addtodo] = useState(
+        () => JSON.parse(window.localStorage.getItem("todo")) || []
+    )
     let [something, newthing] = useState('');
 
-
+    useEffect(() => {
+        window.localStorage.setItem("todo", JSON.stringify(todo))
+    }, [todo])
 
 
 
@@ -42,7 +47,9 @@ function Todo() {
                         return <li key={index} >{list}
 
                             <button onClick={() => {
-                                todo.splice(index, 1);
+                                var todo_copy = todo;
+                                todo_copy.splice(index, 1);
+                                addtodo(todo_copy)
                                 newthing(" ");
                                 alert("할 일을 해결하였습니다.")
 

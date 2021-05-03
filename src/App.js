@@ -1,18 +1,23 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Jumbotron, Container, Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import Clock from './Components/Clock';
 import Todo from './Components/Todo';
-import Calender from './Components/Calender'
+
 
 
 
 function App() {
 
-  let [name, addname] = useState('Guest');
+  let [name, addname] = useState(
+    () => JSON.parse(window.localStorage.getItem("name")) || "Guest"
+  )
   let [name2, addname2] = useState('');
   let [login, logout] = useState(true);
 
+  useEffect(() => {
+    window.localStorage.setItem("name", JSON.stringify(name))
+  }, [name])
   return (
     <div className="App">
       <Navbar bg="dark" variant="dark">
