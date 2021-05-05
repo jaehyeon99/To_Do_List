@@ -5,7 +5,7 @@ function Todo() {
 
     // let [todo, addtodo] = useState([]);
     let [todo, addtodo] = useState(
-        () => JSON.parse(window.localStorage.getItem("todo")) || []
+        () => JSON.parse(window.localStorage.getItem("todo")) || [""]
     )
     let [something, newthing] = useState('');
 
@@ -47,7 +47,7 @@ function Todo() {
                         return <li key={index} >{list}
 
                             <button onClick={() => {
-                                var todo_copy = todo;
+                                var todo_copy = [...todo]
                                 todo_copy.splice(index, 1);
                                 addtodo(todo_copy)
                                 newthing(" ");
